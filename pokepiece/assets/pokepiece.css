@@ -1,0 +1,131 @@
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(135deg, #1e2a78 0%, #5d1686 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 24px #0008, 0 1px 0 #ffc402;
+    background: linear-gradient(90deg, #ffc402 10%, #fff 40%, #ff7f50 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+h1 span {
+    color: #ffc402;
+    -webkit-text-fill-color: #ffc402;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+
+.card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.85) 60%, rgba(173,216,230,0.45) 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 2px 8px 0 #2341A622;
+    border: 2px solid #e3eaff;
+    width: 320px;
+    min-height: 420px;
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.25), 0 4px 16px 0 #ffc40288, 0 0 32px 8px #fff6;
+    border-color: #ffc402;
+    background: linear-gradient(135deg, rgba(255,255,255,0.35) 60%, rgba(173,216,230,0.18) 100%);
+    backdrop-filter: blur(18px) saturate(1.2);
+    -webkit-backdrop-filter: blur(18px) saturate(1.2);
+    transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.card img.avatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 20%; /* centre horizontalement, remonte la tête */
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    border: 4px solid #ffc402;
+    box-shadow: 0 2px 16px #0002;
+    background: #fff;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.card:hover img.avatar {
+    box-shadow: 0 4px 32px #ffc40244, 0 2px 16px #0002;
+    border-color: #2341A6;
+}
+
+.card p {
+    color: #222;
+    font-weight: 500;
+    font-size: 1.08em;
+    margin: 8px 0 0 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff8;
+}
+.card p:first-child {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #2341A6;
+    margin-bottom: 2px;
+    text-shadow: 0 2px 8px #ffc40244;
+}
+
+@media (max-width: 900px) {
+    .container {
+        gap: 24px;
+    }
+    .card {
+        width: 90vw;
+        min-width: unset;
+        padding: 24px 8vw 24px 8vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .card {
+        width: 96vw;
+        padding: 18px 2vw 18px 2vw;
+    }
+    .card img.avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 16px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+}
