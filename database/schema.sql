@@ -18,3 +18,16 @@ INSERT INTO personnages (prenom, FDD, Description, Localisation, image) VALUES
 ('Marshall.D.Teach', 'Yami Yami no Mi - Gura Gura no Mi', 'Pirate redoutable et manipulateur, Barbe Noire possède deux pouvoirs de fruits du démon. Il poursuit son propre rêve de domination et défie l’équilibre du monde.', 'L''île de la Ruche, Shin Sekai', 'assets/img/barbenoire.png'),
 ('Kuma', 'Nikyu Nikyu no Mi', 'Ancien révolutionnaire devenu Shichibukai, Kuma est un homme immense et mystérieux, modifié en cyborg par Vegapunk.', 'South Blue', 'assets/img/kuma.png'),
 ('Kizaru', 'Pika Pika no Mi', 'Amiral de la Marine à l’allure décontract.', 'North Blue', 'assets/img/kizaru.png');
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  is_admin TINYINT(1) DEFAULT '0',
+  PRIMARY KEY (id),
+  UNIQUE KEY email (email),
+  KEY idx_users_email (email)
+);

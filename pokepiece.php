@@ -31,9 +31,14 @@ $classe = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <a href="pokepiece.php" class="nav-btn">Accueil</a>
         </div>
         <div class="nav-right">
-            <a href="#" class="nav-btn">Connexion</a>
-            <a href="#" class="nav-btn">Inscription</a>
-            <a href="#" class="nav-btn">Bouton 1</a>
+            <?php session_start(); ?>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="deconnexion.php" class="nav-btn">Déconnexion</a>
+            <?php else: ?>
+                <a href="connexion.php" class="nav-btn">Connexion</a>
+                <a href="inscription.php" class="nav-btn">Inscription</a>
+            <?php endif; ?>
+            <a href="pokepiece.php" class="nav-btn">Bouton 1</a>
             <a href="#" class="nav-btn">Bouton 2</a>
         </div>
     </nav>
