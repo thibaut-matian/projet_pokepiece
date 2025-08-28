@@ -1,3 +1,56 @@
+/* --- NAVBAR --- */
+.navbar {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 64px;
+    background: rgba(30,42,120,0.92);
+    box-shadow: 0 2px 16px #0002;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 16px;
+}
+h1 {
+    margin: 32px 0 0 0;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 24px #0008, 0 1px 0 #ffc402;
+    background: linear-gradient(90deg, #ffc402 10%, #fff 40%, #ff7f50 90%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.nav-right {
+    display: flex;
+    gap: 18px;
+}
+.nav-btn {
+    color: #fff;
+    background: linear-gradient(90deg, #2341A6 60%, #5D1686 100%);
+        border: none;
+        border-radius: 18px;
+        padding: 8px 22px;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 1px;
+        box-shadow: 0 1px 6px #0002;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        display: inline-block;
+}
+.nav-btn:hover {
+    background: linear-gradient(90deg, #ffc402 60%, #ff7f50 100%);
+    color: #2341A6;
+    box-shadow: 0 2px 12px #ffc40244;
+}
 
 
 body {
