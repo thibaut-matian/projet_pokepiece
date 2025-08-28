@@ -20,6 +20,7 @@ h1 {
     letter-spacing: 2px;
     text-shadow: 0 4px 24px #0008, 0 1px 0 #ffc402;
     background: linear-gradient(90deg, #ffc402 10%, #fff 40%, #ff7f50 90%);
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
